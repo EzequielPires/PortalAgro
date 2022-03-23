@@ -1,0 +1,176 @@
+.header {
+    padding: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main {
+    margin-top: 80px;
+    position: relative;
+    h1 {
+        position: relative;
+        max-width: 680px ;
+        color: #333;
+        font-weight: 700;
+        font-size: 3.5rem;
+        margin-bottom: 80px;
+        span {
+            color: #259B23;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: -80%;
+            left: -118px;
+            background: url(../assets/folha-1.svg);
+            width: 156px;
+            height: 174px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2rem;
+            right: 0;
+            width: 200%;
+            height: 4px;
+            border-radius: 4px;
+            background: #333;
+            animation: aparecer 1s ease-in;
+        }
+    }
+    .image_persona {
+        width: 586px;
+        height: 694px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: -180px;
+            right: -110%;
+            width: 762px;
+            height: 762px;
+            border-radius: 50%;
+            background: #fff;
+            border: 72px solid #259B23;
+            z-index: -1;
+        }
+        .ico_whatsapp {
+            position: absolute;
+            right: 0;
+            top: 146px;
+            width: 146px;
+            animation: flutuar 6s ease-in-out infinite;
+        }
+        .ico_facebook {
+            position: absolute;
+            width: 91px;
+            left: 56px;
+            top: 348px;
+            animation: flutuar 3s ease-in-out infinite;
+        }
+        .ico_youtube {
+            position: absolute;
+            width: 146px;
+            right: 56px;
+            top: 348px;
+            animation: flutuar 4s ease-in-out infinite;
+        }
+        .ico_google {
+            position: absolute;
+            width: 146px;
+            animation: flutuar 6s ease-in-out infinite;
+        }
+        img {
+            width: 100%;
+            z-index: 10;
+        }
+    }
+}
+@media (max-width: 720px) {
+    .main {
+        margin-top: 32px;
+        width: 100%;
+        h1 {
+            font-size: 1.5rem;
+            &::before {
+                content: '';
+                position: absolute;
+                top: -160%;
+                left: -10%;
+                background: url(../assets/folha-1.svg);
+                background-size: cover;
+                width: 120px;
+                height: 120px;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -2rem;
+                right: 0;
+                width: 200%;
+                height: 4px;
+                border-radius: 4px;
+                background: #333;
+                animation: aparecer 1s ease-in;
+            }
+        }
+        .image_persona {
+            height: unset;
+            margin-bottom: 48px;
+            &::after {
+                display: none;
+            }
+            .ico_whatsapp {
+                position: absolute;
+                right: 0;
+                top: 146px;
+                width: 80px;
+                animation: flutuar 6s ease-in-out infinite;
+            }
+            .ico_facebook {
+                position: absolute;
+                width: 80px;
+                left: 56px;
+                top: 348px;
+                animation: flutuar 3s ease-in-out infinite;
+            }
+            .ico_youtube {
+                position: absolute;
+                width: 80px;
+                right: 56px;
+                top: 348px;
+                animation: flutuar 4s ease-in-out infinite;
+            }
+            .ico_google {
+                position: absolute;
+                width: 80px;
+                animation: flutuar 6s ease-in-out infinite;
+            }
+        }
+    }
+}
+
+@keyframes flutuar {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(14%);
+        transform: translateY(14%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+  }
+@keyframes aparecer {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateX(-100%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateX(0);
+    }
+  }

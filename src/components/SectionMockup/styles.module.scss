@@ -1,0 +1,63 @@
+.section_mockup {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #333;
+        max-width: 580px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            right: -248px;
+            bottom: -100px;
+            width: 172px;
+            height: 172px;
+            background: url(../../assets/folha-4.svg) no-repeat;
+        }   
+    }
+    img {
+        max-width: 280px;
+    }
+    .content {
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+        img {
+            flex: 1;
+        }
+        .col_item {
+            .title {
+                display: flex;
+                color: #39A044;
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 16px;
+                &::after {
+                    display: none;
+                }
+            }
+            p {
+                color: #999;
+            }
+        }
+    }
+}
+@media (max-width: 720px) {
+    .section_mockup {
+        &::after, &::before {
+            display: none;
+        }
+        img {
+            max-width: 100%;
+        }
+        .title {
+            font-size: 1.5rem;
+            text-align: start;
+        }
+    }
+}

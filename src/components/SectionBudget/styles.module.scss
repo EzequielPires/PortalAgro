@@ -1,0 +1,46 @@
+.section_budget {
+    padding: 80px 0;
+    background: #eee;
+}
+.title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    max-width: 1020px;
+    margin-bottom: 48px;
+    span {
+        color: #39A044;
+    }
+    &:first-child {
+        margin-bottom: .5rem;
+    }
+}
+.item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    strong {
+        font-size: 2rem;
+        color: #39A044;
+        font-weight: 700;
+    }
+    span {
+        text-align: center;
+        font-size: 1rem;
+        color: #333;
+    }
+}
+
+@media (max-width: 720px) {
+    .section_budget {
+        .title {
+            font-size: 1.5rem;
+            text-align: start;
+        }
+        .item {
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+    }
+}

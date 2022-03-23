@@ -1,0 +1,93 @@
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    gap: 3rem;
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 16px 24px rgba($color: #000000, $alpha: 0.15);
+    padding: 1.5rem;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 178px;
+        height: 178px;
+        top: -78px;
+        right: -98px;
+        background: url(../../assets/folha-2.svg);
+        background-size: cover;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 4rem;
+        left: -110%;
+        width: 762px;
+        height: 762px;
+        border-radius: 50%;
+        background: #fff;
+        border: 72px solid #259b23;
+        z-index: -1;
+    }
+    .alert {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        border-radius: 6px;
+        padding: 0 12px;
+    }
+}
+.title {
+    font-size: 22px;
+    max-width: 688px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    span {
+        color: #259b23;
+    }
+}
+.submit {
+    background: #259b23;
+    color: #fff;
+    height: 48px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 0;
+}
+.input_box {
+    position: relative;
+    label {
+        position: absolute;
+        background: #fff;
+        top: -12px;
+        left: 12px;
+        padding: 0 0.5rem;
+    }
+    input {
+        width: 100%;
+        height: 48px;
+        padding: 0 0.75rem;
+        border-radius: 6px;
+        border: 1px solid #d3d3d3;
+    }
+}
+@media (max-width: 720px) {
+    .form {
+        box-shadow: none;
+        padding: 0;
+        margin-bottom: 48px;
+        &::before {
+            display: none;
+        }
+        &::after {
+            background-size: cover;
+            right: -10%;
+            width: 120px;
+            height: 120px;
+        }
+    }
+}
