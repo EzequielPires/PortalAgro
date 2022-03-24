@@ -14,11 +14,21 @@ export function FormContactEnd() {
         });
         res.data.accepted ? setResponse(true) : setResponse(false);
     }
+    const maskPhone = (v) => {
+        v = v.replace(/\D/g, "");
+        if (v.length > 10) {
+            v = v.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+        } else {
+            v = v.replace(/^(\d{2})(\d)/g, "($1) $2");
+            v = v.replace(/(\d)(\d{4})$/, "$1-$2");
+        }
+        return v;
+    }
     return (
         <>
             <form className={styles.form} onSubmit={send}>
                 <div className={styles.input_box}>
-                    <input required type="text" value={cellPhone} onChange={({ target }) => setCellPhone(target.value)} name="cell_phone" id="cell_phone" placeholder="(00) 00000-0000" />
+                    <input required type="text" value={cellPhone} onChange={({ target }) => setCellPhone(maskPhone(target.value))} name="cell_phone" id="cell_phone" placeholder="(00) 00000-0000" />
                     <label htmlFor="cell_phone">Número de celular / Whatsapp *</label>
                 </div>
                 <div className={styles.input_box}>
