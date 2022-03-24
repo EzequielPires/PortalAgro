@@ -24,9 +24,11 @@ function MyApp({ Component, pageProps }) {
             `
           }
         </script>
-        <noscript><img height="1" width="1" style="display:none"
+        <noscript>
+          {`<img height="1" width="1" style="display:none"
           src="https://www.facebook.com/tr?id=1950676088450296&ev=PageView&noscript=1"
-        /></noscript>
+        />`}
+        </noscript>
       </Helmet>
     </HelmetProvider>
   )
